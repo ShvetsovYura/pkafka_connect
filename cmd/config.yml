@@ -1,0 +1,12 @@
+webserver:
+  address: ':8001'
+consumer:
+  topics:
+    - metrics
+  bootstrap_servers: 'kafka-0:9092,kafka-1:9092,kafka-2:9092'
+  group: metrics-group
+  auto_offset_reset: earliest
+  enable_auto_commit: true
+  poll_timeout: 200ms
+  session_timeout_ms: 6000
+  fetch_min_bytes: 1000
